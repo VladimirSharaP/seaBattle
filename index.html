@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Морской бой</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+	<header>
+		<h1>Морской бой</h1>
+	</header>
+	<section>
+		<div id="leftFieldContainer">
+			<p>Игрок</p>
+			<div id="userXCoord"></div>
+			<div id="leftField">
+				<div id="leftFieldBlock"></div>
+			</div>
+			<div id="userYCoord"></div>
+		</div>
+		<div id="rightFieldContainer">
+			<p>Компьютер</p>
+			<div id="compXCoord"></div>
+			<div id="rightField">
+				<div id="rightFieldBlock"></div>
+			</div>
+			<div id="compYCoord"></div>
+		</div>
+	</section>
+	<div id="footer">
+		<div id="info"></div>
+		<nav>
+			<ul>
+				<li id=reload>Старт</li>
+				<li onclick="getName()">Переименовать</li>
+				<li onclick="$('#helpContainer').toggle();" title="Помощь">Помощь</li>
+			</ul>
+		</nav>
+		<div id="userName">
+			<div>
+				<span>
+					<p>Введите имя игрока</p>
+				</span>
+				<input type="text" id="name" value="Игрок" />
+				<button onclick="getName()">OK</button>
+			</div>
+		</div>
+	</div>
+	<div id="helpContainer" onclick="$('#helpContainer').toggle();">
+		<div>
+			<h3>Помощь</h3>
+			<p>Правое поле - поле противника.
+			</p>
+			<p>
+				Нажатие левой кнопки мыши - выстрел;
+			</p>
+			<p>
+				Нажатие правой кнопки мыши - поставить флажок.
+			</p>
+			Нажмите в любое место, чтобы закрыть справку.
+		</div>
+	</div>
+	<script src="script.js"></script>
+</body>
+
+</html>
